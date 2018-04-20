@@ -1,0 +1,30 @@
+add my entity entities:
+  title: 'Create new My entity entities'
+
+administer my entity entities:
+  title: 'Administer My entity entities'
+  description: 'Allow to access the administration form to configure My entity entities.'
+  restrict access: true
+
+delete my entity entities:
+  title: 'Delete My entity entities'
+
+edit my entity entities:
+  title: 'Edit My entity entities'
+
+view published my entity entities:
+  title: 'View published My entity entities'
+
+view unpublished my entity entities:
+  title: 'View unpublished My entity entities'
+
+view all my entity revisions:
+  title: 'View all My entity revisions'
+
+revert all my entity revisions:
+  title: 'Revert all My entity revisions'
+  description: 'Role requires permission <em>view My entity revisions</em> and <em>edit rights</em> for my entity entities in question or <em>administer my entity entities</em>.'
+
+delete all my entity revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view My entity revisions</em> and <em>delete rights</em> for my entity entities in question or <em>administer my entity entities</em>.'
