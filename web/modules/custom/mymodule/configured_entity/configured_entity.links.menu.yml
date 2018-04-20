@@ -1,0 +1,9 @@
+
+# New configured entity menu items definition
+entity.new_configured_entity.collection:
+  title: 'New configured entity'
+  route_name: entity.new_configured_entity.collection
+  description: 'List New configured entity (bundles)'
+  parent: system.admin_structure
+  weight: 99
+
