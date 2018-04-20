@@ -1,0 +1,19 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Фільтр
+      fields:
+        name:
+          label: 'Ім''я користувача'
+        status:
+          label: Стан
+        roles_target_id:
+          label: Ролі
+        operations:
+          label: Операції
+      filters:
+        status:
+          group_info:
+            label: Стан

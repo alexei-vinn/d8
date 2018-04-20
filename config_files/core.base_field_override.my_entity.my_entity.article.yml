@@ -1,0 +1,20 @@
+uuid: caf8380b-c43e-4d2b-b8c2-23c8f8fd35ad
+langcode: uk
+status: true
+dependencies:
+  module:
+    - customentity
+id: my_entity.my_entity.article
+field_name: article
+entity_type: my_entity
+bundle: my_entity
+label: Article
+description: 'Title of the referenced article.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

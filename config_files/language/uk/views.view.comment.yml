@@ -1,0 +1,33 @@
+label: Коментарі
+display:
+  default:
+    display_options:
+      fields:
+        comment_bulk_form:
+          action_title: Дія
+        subject:
+          label: Тема
+        operations:
+          label: Операції
+      filters:
+        subject:
+          expose:
+            label: Тема
+      title: Коментарі
+  page_published:
+    display_options:
+      menu:
+        title: Коментарі
+  page_unapproved:
+    display_options:
+      filters:
+        subject:
+          expose:
+            label: Тема
+      fields:
+        comment_bulk_form:
+          action_title: Дія
+        subject:
+          label: Тема
+        operations:
+          label: Операції

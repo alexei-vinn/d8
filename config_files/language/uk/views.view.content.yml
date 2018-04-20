@@ -1,0 +1,20 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Фільтр
+      fields:
+        type:
+          label: 'Тип матеріалів'
+        status:
+          label: Стан
+        operations:
+          label: Операції
+      filters:
+        type:
+          expose:
+            label: 'Тип матеріалів'
+        status:
+          expose:
+            label: Стан

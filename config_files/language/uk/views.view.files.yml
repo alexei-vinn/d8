@@ -1,0 +1,15 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Фільтр
+      fields:
+        filename:
+          label: 'Назва (ім''я)'
+        status:
+          label: Стан
+      filters:
+        status:
+          expose:
+            label: Стан
