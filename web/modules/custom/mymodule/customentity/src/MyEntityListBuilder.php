@@ -45,4 +45,20 @@ class MyEntityListBuilder extends EntityListBuilder
         return $row + parent::buildRow($entity);
     }
 
+    protected function getEntityIds() {
+
+        $query = $this->getStorage()->getQuery()
+            ->sort($this->entityType->getKey('id'));
+
+        $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
+        $query->condition('langcode', $langcode);
+
+
+        // Only add the pager if a limit is specified.
+        if ($this->limit) {
+            $query->pager($this->limit);
+        }
+        return $query->execute();
+    }
+
 }

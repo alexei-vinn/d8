@@ -60,15 +60,4 @@ class MyEntityStorage extends SqlContentEntityStorage implements MyEntityStorage
             ->execute();
     }
 
-    protected function doLoadMultiple(array $ids = NULL)
-    {
-        $ids = $this->database->query(
-            'SELECT id FROM {my_entity_revision} WHERE langcode=:langcode GROUP BY id ORDER BY id',
-            [':langcode' => \Drupal::languageManager()->getCurrentLanguage()->getId()]
-        )->fetchCol();
-
-        return $this->getFromStorage($ids);
-
-    }
-
 }

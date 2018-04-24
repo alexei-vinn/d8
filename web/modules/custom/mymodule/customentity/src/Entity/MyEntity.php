@@ -180,7 +180,8 @@ class MyEntity extends RevisionableContentEntityBase implements MyEntityInterfac
             ->setDisplayConfigurable('form', TRUE)
             ->setDisplayConfigurable('view', TRUE)
             ->setRevisionable(TRUE)
-            ->setTranslatable(TRUE);
+            ->setTranslatable(TRUE)
+            ->setRequired(TRUE);
 
         return $fields;
     }
