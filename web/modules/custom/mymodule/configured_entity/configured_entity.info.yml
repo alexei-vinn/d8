@@ -1,5 +1,5 @@
-name: 'configured_entity'
+name: 'Сonfigured entity'
 type: module
-description: 'Configured Entity'
+description: 'New Configured Entity'
 core: 8.x
 package: 'Custom'

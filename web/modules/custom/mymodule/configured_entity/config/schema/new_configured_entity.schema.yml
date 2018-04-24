@@ -8,5 +8,9 @@ configured_entity.new_configured_entity.*:
     label:
       type: label
       label: 'Label'
-    uuid:
+    title:
       type: string
+      label: 'Title'
+    description:
+      type: text
+      label: 'Description'
