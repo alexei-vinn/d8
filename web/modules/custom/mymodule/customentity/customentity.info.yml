@@ -1,0 +1,5 @@
+name: 'Custom entity'
+type: module
+description: 'Entity test module'
+core: 8.x
+package: 'Custom'
