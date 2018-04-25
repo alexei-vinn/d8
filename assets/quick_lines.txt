@@ -1,3 +1,0 @@
-drupal cr && drush sql-dump > assets/assets.sql
-
-drush sql-drop && drush sql-cli < assets/assets.sql && drupal cr
