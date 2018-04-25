@@ -1,0 +1,28 @@
+entity.configured_entity.list:
+  path: '/configured_entity'
+  defaults:
+    _entity_list: 'new_configured_entity'
+    _title: 'Configured Entity Example'
+  requirements:
+    _permission: 'administer new configured entity'
+entity.configured_entity.add_form:
+  path: '/configured_entity/add'
+  defaults:
+   _title: 'Add entity'
+   _entity_form: new_configured_entity.add
+  requirements:
+      _permission: 'administer new configured entity'
+entity.configured_entity.edit_form:
+  path: '/configured_entity/edit/{new_configured_entity}'
+  defaults:
+   _title: 'Edit entity'
+   _entity_form: new_configured_entity.edit
+  requirements:
+    _permission: 'administer new configured entity'
+entity.configured_entity.delete_form:
+  path: '/configured_entity/delete/{new_configured_entity}'
+  defaults:
+   _title: 'Delete entity'
+   _entity_form: new_configured_entity.delete
+  requirements:
+    _permission: 'administer new configured entity'

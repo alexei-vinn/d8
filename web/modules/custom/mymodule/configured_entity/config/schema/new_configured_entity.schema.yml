@@ -1,0 +1,16 @@
+configured_entity.new_configured_entity.*:
+  type: config_entity
+  label: 'New configured entity config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    title:
+      type: string
+      label: 'Title'
+    description:
+      type: text
+      label: 'Description'

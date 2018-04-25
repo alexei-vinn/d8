@@ -1,0 +1,5 @@
+name: 'Сonfigured entity'
+type: module
+description: 'New Configured Entity'
+core: 8.x
+package: 'Custom'

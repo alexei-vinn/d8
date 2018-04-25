@@ -1,0 +1,18 @@
+administer new configured entity:
+  title: 'Administer new_configured_entity'
+  description: 'Allow to access the administration form to configure new_configured_entity'
+  restrict access: true
+
+view new configured entity:
+  title: 'view my new configured entities'
+
+add new configured entity:
+  title: 'Create my new configured entities'
+
+update new configured entity:
+  title: 'Edit my new configured entities'
+
+
+delete new configured entity:
+  title: 'Delete my new configured entities'
+

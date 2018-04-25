@@ -1,0 +1,7 @@
+entity.new_configured_entity.add_form:
+  route_name: entity.new_configured_entity.add_form
+  title: 'Add New configured entity'
+  appears_on:
+    - entity.configured_entity.list
+
+
