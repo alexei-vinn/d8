@@ -1,0 +1,20 @@
+uuid: 55b61b41-3864-48fc-a555-54c2c933254e
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_api_task
+  theme:
+    - bartik
+id: defaultblock
+theme: bartik
+region: sidebar_first
+weight: -7
+provider: null
+plugin: default_block
+settings:
+  id: default_block
+  label: 'Default block'
+  provider: block_api_task
+  label_display: visible
+visibility: {  }

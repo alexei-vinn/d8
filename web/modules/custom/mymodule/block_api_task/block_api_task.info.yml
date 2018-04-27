@@ -1,0 +1,5 @@
+name: 'Block API task'
+type: module
+description: 'Block API module task'
+core: 8.x
+package: 'Custom'
