@@ -52,27 +52,30 @@ class DefaultBlock extends BlockBase implements ContainerFactoryPluginInterface
             ->execute();
 
         $entities = $this->MyEntityStorage->loadMultiple($ids);
-        $colors = array();
+        $items = array();
+
         foreach ($entities as $entity) {
             /** @var \Drupal\customentity\Entity\MyEntityInterface $entity */
 
-            $colors[] = $entity->get('article')->referencedEntities()[0]->get('field_color')->getValue()[0]['value'];
+            $items['name'][] = $entity->get('name')->getValue()[0]['value'];
 
-            /* Nevermind its just a code snippets */
-            //  $this->messenger->addMessage('Yahoo');
-            //  $referenced_id = $entity->getFields()['article']->getValue()[0]['target_id'];
-            //  dsm($entity->get('name')->getValue()[0]['value']);
-            //  dsm($entity->get('article')->getValue()[0]['target_id']);
-            //  dsm($entity->getFields()['article']->getValue()[0]['target_id']);
+            if ($entity->hasField('article') && $entity->get('article')->referencedEntities()[0]->hasField('field_color')) {
+
+                $items['colors'][] = $entity->get('article')->referencedEntities()[0]->get('field_color')->getValue()[0]['value'];
+            } else {
+                $items['colors'][] = '';
+            }
         }
 
         $build = [];
-        // $build['default_block']['#markup'] = 'Implement DefaultBlock.';
         $build['default_block'] = array(
             '#theme' => 'item_list',
-            '#items' => $colors
+            '#items' => $items['name']
         );
         $build['#attached']['library'][] = 'block_api_task/block_api_task.colored';
+        $build['#attached']['drupalSettings']['block_api_task']['colors'] = $items['colors'];
+        $build['#attached']['drupalSettings']['block_api_task']['classname'] = $this->getPluginId();
+        $build['#attributes']['class'][] = $this->getPluginId();
         $build['#cache']['max-age'] = 0;
         return $build;
     }

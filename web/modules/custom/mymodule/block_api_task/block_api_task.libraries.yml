@@ -4,3 +4,4 @@ block_api_task.colored:
   dependencies:
     - core/jquery
     - core/drupal
+    - core/drupalSettings

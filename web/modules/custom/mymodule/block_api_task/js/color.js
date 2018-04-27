@@ -1,12 +1,11 @@
-(function ($, Drupal) {
+(function ($, Drupal, drupalSettings) {
     Drupal.behaviors.color = {
         attach: function attach(context) {
-            var li = $('li', context);
-
-            li.each(function () {
-                var color = $(this).text();
-                $(this).css('color', color);
+            var colors = drupalSettings.block_api_task.colors;
+            var classname = drupalSettings.block_api_task.classname;
+            $('.' + classname + ' li').each(function (index, item) {
+                $(this).css('color', colors[index]);
             });
         }
     }
-})(jQuery, Drupal);
+})(jQuery, Drupal, drupalSettings);
