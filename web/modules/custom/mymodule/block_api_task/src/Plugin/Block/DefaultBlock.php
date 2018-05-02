@@ -57,14 +57,19 @@ class DefaultBlock extends BlockBase implements ContainerFactoryPluginInterface
         foreach ($entities as $entity) {
             /** @var \Drupal\customentity\Entity\MyEntityInterface $entity */
 
-            $items['name'][] = $entity->get('name')->getValue()[0]['value'];
+            if ($entity->hasField('article') && $entity->getFieldDefinition('article')->getType() == 'entity_reference') {
+                if (!empty($entity->get('article')->getValue()[0]['target_id']) && $referenced = $this->NodeStorage->load($entity->get('article')->getValue()[0]['target_id'])) {
 
-            if ($entity->hasField('article') && $entity->get('article')->referencedEntities()[0]->hasField('field_color')) {
+                    if ($referenced->hasField('field_color') && !empty($referenced->get('field_color')->getValue()[0]['value'])) {
 
-                $items['colors'][] = $entity->get('article')->referencedEntities()[0]->get('field_color')->getValue()[0]['value'];
-            } else {
-                $items['colors'][] = '';
+                        $items['name'][] = $entity->get('name')->getValue()[0]['value'];
+                        $items['colors'][] = $entity->get('article')->referencedEntities()[0]->get('field_color')->getValue()[0]['value'];
+                    }
+
+                }
+
             }
+
         }
 
         $build = [];
