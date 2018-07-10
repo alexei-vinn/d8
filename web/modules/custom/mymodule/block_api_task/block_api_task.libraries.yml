@@ -1,0 +1,7 @@
+block_api_task.colored:
+  js:
+    js/color.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
